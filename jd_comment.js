@@ -12,6 +12,8 @@ if ($.isNode()) {
     Object.keys(jdCookieNode).forEach((item) => {
         cookiesArr.push(jdCookieNode[item])
     });
+    // 对cookie二次处理，取低5个元素之后的数据
+    if (process.env.COOKIE_SLICE === 'true') cookiesArr.slice(4);
     if (process.env.JD_DEBUG && process.env.JD_DEBUG === 'false') console.log = () => { };
 } else {
     let cookiesData = $.getdata('CookiesJD') || "[]";
