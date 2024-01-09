@@ -39,7 +39,7 @@ if ($.isNode() && process.env.SEQCK_DisableCKNOTIFY) {
 
 const fs = require('fs');
 let TempCKUid = [];
-let strUidFile = '/ql/scripts/CK_WxPusherUid.json';
+let strUidFile = '/ql/data/scripts/CK_WxPusherUid.json';
 let UidFileexists = fs.existsSync(strUidFile);
 if (UidFileexists) {
     console.log("检测到一对一Uid文件WxPusherUid.json，载入...");

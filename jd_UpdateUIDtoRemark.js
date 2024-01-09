@@ -17,7 +17,7 @@ const {
     getstatus
 } = require('./ql');
 
-let strUidFile = '/ql/scripts/CK_WxPusherUid.json';
+let strUidFile = '/ql/data/scripts/CK_WxPusherUid.json';
 const fs = require('fs');
 let UidFileexists = fs.existsSync(strUidFile);
 let TempCKUid = [];
