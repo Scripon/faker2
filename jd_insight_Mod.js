@@ -94,7 +94,7 @@ async function main() {
                 }
             }
 			if ($.isNode() && WP_APP_TOKEN_ONE) {
-				await notify.sendNotifybyWxPucher("京洞察问卷通知", msg, `${$.UserName}`,'\n\n本通知 By ccwav Mod',"您有可以做的调查问卷");
+				await notify.sendNotifybyWxPucher("京洞察问卷通知", msg, `${$.UserName}`,'\n\n本通知 By 京东小助手',"您有可以做的调查问卷");
 			}
 			allnotify+=msg
         }

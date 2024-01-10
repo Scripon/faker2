@@ -56,7 +56,7 @@ if ($.isNode()) {
 			$.UserName = decodeURIComponent(cookie.match(/pt_pin=([^; ]+)(?=;?)/) && cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1]);
 			console.log(`******开始发送【京东账号${(i+1)}】${$.UserName}*********`);
 			if ($.isNode()) {				
-				await notify.sendNotifybyWxPucher("有您的消息，请点击查看", `${strNotify}`, `${$.UserName}`,'\n\n本通知 By ccwav Mod',strTitle);
+				await notify.sendNotifybyWxPucher("有您的消息，请点击查看", `${strNotify}`, `${$.UserName}`,'\n\n本通知 By 京东小助手',strTitle);
 			}
 		}
 	}
