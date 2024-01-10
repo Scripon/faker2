@@ -186,7 +186,7 @@ if (process.env.NOTIFY_SHOWNAMETYPE) {
     if (ShowRemarkType == "4")
         console.log("检测到显示备注名称，格式为: 备注");
 }
-async function sendNotify(text, desp, params = {}, author = '\n\n本通知 By ccwav Mod', strsummary = "") {
+async function sendNotify(text, desp, params = {}, author = '\n\n本通知 京东小助手', strsummary = "") {
     console.log(`开始发送通知...`);
 
     //NOTIFY_FILTERBYFILE代码来自Ca11back.
@@ -372,7 +372,7 @@ async function sendNotify(text, desp, params = {}, author = '\n\n本通知 By cc
                                         strNotifyOneTemp += `\n` + strAllNotify;
                                     desp = strNotifyOneTemp;
                                     if (WP_APP_TOKEN_ONE) {
-                                        await sendNotifybyWxPucher(`账号过期下线通知`, strNotifyOneTemp, strdecPtPin,'\n\n本通知 By ccwav Mod',`账号下线通知`);
+                                        await sendNotifybyWxPucher(`账号过期下线通知`, strNotifyOneTemp, strdecPtPin,'\n\n本通知 京东小助手',`账号下线通知`);
                                     }
 
                                 } else {
@@ -383,7 +383,7 @@ async function sendNotify(text, desp, params = {}, author = '\n\n本通知 By cc
                                         strNotifyOneTemp += `\n` + strAllNotify;
                                     desp = strNotifyOneTemp;
                                     if (WP_APP_TOKEN_ONE) {
-                                        await sendNotifybyWxPucher(`账号过期下线通知`, strNotifyOneTemp, strdecPtPin,'\n\n本通知 By ccwav Mod',`账号下线通知`);
+                                        await sendNotifybyWxPucher(`账号过期下线通知`, strNotifyOneTemp, strdecPtPin,'\n\n本通知 京东小助手',`账号下线通知`);
                                     }
                                 }
                             } else {
@@ -939,7 +939,7 @@ function getRemark(strRemark) {
     }
 }
 
-async function sendNotifybyWxPucher(text, desp, PtPin, author = '\n\n本通知 By ccwav Mod', strsummary = "") {
+async function sendNotifybyWxPucher(text, desp, PtPin, author = '\n\n本通知 京东小助手', strsummary = "") {
 
     try {
         var Uid = "";
