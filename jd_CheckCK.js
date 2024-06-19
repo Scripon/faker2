@@ -235,24 +235,24 @@ if ($.isNode() && process.env.CHECKCK_ALLNOTIFY) {
                         const DisableCkBody = await DisableCk(tempid);
                         if (DisableCkBody.code == 200) {
                             if ($.isNode() && WP_APP_TOKEN_ONE) {
-                                strNotifyOneTemp = `京东账号: ${$.nickName || $.UserName2} 已失效,自动禁用成功!\n如果要继续挂机，请联系管理员重新登录账号.`
+                                strNotifyOneTemp = `京东账号: ${$.nickName || $.UserName2} 已失效,自动禁用成功!\n如果要继续挂机，请使用app获取新的cookie并发送.`
 
                                     if (strAllNotify)
                                         strNotifyOneTemp += `\n` + strAllNotify;
 
-                                    await notify.sendNotifybyWxPucher(`${$.name}`, strNotifyOneTemp, `${$.UserName2}`,'\n\n本通知 By 京东小助手',`账号过期通知`);
+                                    await notify.sendNotifybyWxPucher(`${$.name}`, strNotifyOneTemp, `${$.UserName2}`,'\n\n本通知 By 京东小助手',`账号失效通知`);
                             }
                             console.log(`京东账号${$.index} : ${$.nickName || $.UserName2} 已失效,自动禁用成功!\n`);
                             TempDisableMessage = ReturnMessageTitle + ` (自动禁用成功!)\n`;
                             TempErrorMessage = ReturnMessageTitle + ` 已失效,自动禁用成功!\n`;
                         } else {
                             if ($.isNode() && WP_APP_TOKEN_ONE) {
-                                strNotifyOneTemp = `京东账号: ${$.nickName || $.UserName2} 已失效!\n如果要继续挂机，请联系管理员重新登录账号.`
+                                strNotifyOneTemp = `京东账号: ${$.nickName || $.UserName2} 已失效!\n如果要继续挂机，请使用app获取新的cookie并发送.`
 
                                     if (strAllNotify)
                                         strNotifyOneTemp += `\n` + strAllNotify;
 
-                                    await notify.sendNotifybyWxPucher(`${$.name}`, strNotifyOneTemp, `${$.UserName2}`,'\n\n本通知 By 京东小助手',`账号过期通知`);
+                                    await notify.sendNotifybyWxPucher(`${$.name}`, strNotifyOneTemp, `${$.UserName2}`,'\n\n本通知 By 京东小助手',`账号失效通知`);
                             }
                             console.log(`京东账号${$.index} : ${$.nickName || $.UserName2} 已失效,自动禁用失败!\n`);
                             TempDisableMessage = ReturnMessageTitle + ` (自动禁用失败!)\n`;
