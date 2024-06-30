@@ -4,7 +4,7 @@
 定时请自行修改，建议手动运行。
 请勿频繁跑动，容易风控。
 
-cron:1 22 * * * jd_Advent_exchange.js
+cron:1 1 1 1 * jd_Advent_exchange.js
 
 */
 
